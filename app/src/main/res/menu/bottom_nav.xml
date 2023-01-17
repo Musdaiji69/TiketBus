@@ -6,9 +6,9 @@
         android:icon="@drawable/ic_home"/>
     <item android:title="@string/pesan_tiket"
         android:id="@+id/pesan"
-        android:icon="@drawable/ic_pesan"/>
+        android:icon="@drawable/ic_pesantiket"/>
     <item android:title="@string/bantuan"
-        android:id="help"
+        android:id="@+id/help"
         android:icon="@drawable/ic_help"/>
     <item android:title="@string/profile"
         android:id="@+id/profile"
