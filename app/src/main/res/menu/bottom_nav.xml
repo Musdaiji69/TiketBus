@@ -10,7 +10,7 @@
     <item android:title="@string/bantuan"
         android:id="@+id/help"
         android:icon="@drawable/ic_help"/>
-    <item android:title="@string/profile"
+    <item android:title="@string/Profile"
         android:id="@+id/profile"
         android:icon="@drawable/ic_profile"/>
 
