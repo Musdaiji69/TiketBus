@@ -1,16 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home">
 
-    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textview1" />
-</FrameLayout>
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_support_spesialist"
+                    android:layout_width="170dp"
+                    android:layout_height="56dp"
+                    android:layout_marginRight="16dp"
+                    android:padding="8dp"
+                    android:text="Support specialist "
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+                <Button
+                    android:id="@+id/btn_web_dev"
+                    android:layout_width="170dp"
+                    android:layout_height="56dp"
+                    android:layout_marginRight="16dp"
+                    android:padding="8dp"
+                    android:text="Web Developer"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+                <Button
+                    android:id="@+id/btn_network_engginer"
+                    android:layout_width="170dp"
+                    android:layout_height="56dp"
+                    android:layout_marginRight="16dp"
+                    android:padding="8dp"
+                    android:text="Network engineer"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+                <Button
+                    android:id="@+id/btn_it_director"
+                    android:layout_width="170dp"
+                    android:layout_height="56dp"
+                    android:padding="8dp"
+                    android:text=" IT director"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

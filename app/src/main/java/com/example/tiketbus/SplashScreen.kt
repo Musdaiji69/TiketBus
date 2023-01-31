@@ -14,7 +14,7 @@ class SplashScreen : AppCompatActivity() {
 
         //kode untuk menjalankan activity selanjutnya
         Handler().postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, Register_page::class.java))
             finish()
         }, SPLASH_TIME_OUT)
     }
