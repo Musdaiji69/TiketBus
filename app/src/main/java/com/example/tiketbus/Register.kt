@@ -10,7 +10,7 @@ class Register : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
     btnRegister.setOnClickListener {
-        val intent = Intent( Intent(this, Register_page::class.java))
+        val intent = Intent( Intent(this, MainActivity::class.java))
         startActivity(intent)
     }
     }
