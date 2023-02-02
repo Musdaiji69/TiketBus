@@ -1,16 +1,694 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home">
 
-    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/img_bgheader"
+            android:layout_width="469dp"
+            android:layout_height="219dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/header" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textview1" />
-</FrameLayout>
+        <RelativeLayout
+            android:id="@+id/pesan"
+            android:layout_width="343dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_bgheader">
+
+            <TextView
+                android:id="@+id/textin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="41dp"
+                android:text="Temukan Tiket Bus Murah Hanya di Buzz"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/textin"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border"
+                android:hint="kota asal"
+                android:textSize="7dp" />
+
+            <EditText
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/textin"
+                android:layout_marginStart="97dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border"
+                android:hint="kota asal"
+                android:textSize="7dp" />
+
+            <EditText
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/textin"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="176dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border"
+                android:hint="kota asal"
+                android:textSize="7dp" />
+
+            <EditText
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/textin"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="255dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border"
+                android:hint="kota asal"
+                android:textSize="7dp" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/border1"
+                android:text="Cari Tiket"
+                android:textAlignment="center"
+                android:textSize="8dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/Diskon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="15dp"
+            android:text="Ada Kupon Promo Nih.!"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/horizontalScrollView"
+            app:layout_constraintTop_toBottomOf="@+id/pesan" />
+
+        <TextView
+            android:id="@+id/Diskon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:text="Cuma Untukmu.."
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/horizontalScrollView"
+            app:layout_constraintTop_toBottomOf="@+id/Diskon" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pesan">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_support_spesialist"
+                    android:layout_width="170dp"
+                    android:layout_height="56dp"
+                    android:layout_marginRight="16dp"
+                    android:drawableLeft="@drawable/ic_diskon"
+                    android:padding="8dp"
+                    android:text="Potongan 30%"
+                    android:textColor="@color/black"
+                    android:textSize="10dp"
+                    app:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.886"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_bg_category" />
+
+                <Button
+                    android:id="@+id/btn_web_dev"
+                    android:layout_width="170dp"
+                    android:layout_height="56dp"
+                    android:layout_marginRight="16dp"
+                    android:drawableLeft="@drawable/ic_diskon"
+                    android:padding="8dp"
+                    android:text="Potongan 50%"
+                    android:textColor="@color/black"
+                    android:textSize="10dp"
+                    app:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_bg_category" />
+
+                <Button
+                    android:id="@+id/btn_network_engginer"
+                    android:layout_width="170dp"
+                    android:layout_height="56dp"
+                    android:layout_marginRight="16dp"
+                    android:drawableLeft="@drawable/ic_diskon"
+                    android:padding="8dp"
+                    android:text="Potongan 50%"
+                    android:textColor="@color/black"
+                    android:textSize="10dp"
+                    app:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.887"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_bg_category" />
+
+                <Button
+                    android:id="@+id/btn_it_director"
+                    android:layout_width="170dp"
+                    android:layout_height="56dp"
+                    android:drawableLeft="@drawable/ic_diskon"
+                    android:padding="8dp"
+                    android:text="Potongan 50%"
+                    android:textColor="@color/black"
+                    android:textSize="10dp"
+                    app:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.879"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_bg_category" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/Loket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Temukan Loket Terdekat"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView3"
+            android:layout_width="398dp"
+            android:layout_height="133dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Loket"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/minigame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:id="@+id/game"
+                            android:layout_width="69dp"
+                            android:layout_height="52dp"
+                            android:src="@drawable/bus">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Medan-Aceh"
+                            android:textColor="#808080"
+                            android:textSize="16sp"></TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/PasangaAC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:id="@+id/pemasanganac"
+                            android:layout_width="69dp"
+                            android:layout_height="52dp"
+                            android:src="@drawable/bus">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Binjai-Siantar"
+                            android:textColor="#808080"
+                            android:textSize="16sp">
+
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CuciAC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:id="@+id/cuciac"
+                            android:layout_width="69dp"
+                            android:layout_height="52dp"
+                            android:src="@drawable/bus">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Arab-Medan"
+                            android:textColor="#808080"
+                            android:textSize="16sp">
+
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ServisAC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:id="@+id/repairac"
+                            android:layout_width="69dp"
+                            android:layout_height="52dp"
+                            android:src="@drawable/bus">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Aceh-Mekkah"
+                            android:textColor="#808080"
+                            android:textSize="16sp">
+
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/TambahFreon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:id="@+id/acmachine"
+                            android:layout_width="69dp"
+                            android:layout_height="52dp"
+                            android:src="@drawable/bus">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Sibolga-Nagan"
+                            android:textColor="#808080"
+                            android:textSize="16sp">
+
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="24dp"
+            android:text="Yuk Bergabung Dengan Kami.."
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/horizontalScrollView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView3" />
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="132dp"
+            android:text="Dapatkan banyak keuntungan"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+        <Button
+            android:id="@+id/gabung"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="105dp"
+            android:background="@color/white"
+            android:text="Gabung sekarang"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt2" />
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="70dp"
+            android:text="Keuntungan Bergabung dengan kami"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gabung" />
+
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:text="Nikmati semua fasilitas yang tersedia"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt3" />
+
+        <LinearLayout
+            android:id="@+id/gabung1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="60dp"
+            android:orientation="horizontal"
+            android:background="@color/blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt4">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/image1" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/image2" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/image3" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/image4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/faq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gabung1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Butuh Bantuan?"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beberapa jawaban yang mungkin anda dapatkan..."
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:text="-> what are you payment methods?"
+                android:textSize="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-> what are you payment methods?"
+                android:textSize="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-> what are you payment methods?"
+                android:textSize="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-> what are you payment methods?"
+                android:textSize="10dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/faq"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/faq"
+            app:layout_constraintTop_toBottomOf="@id/gabung1" />
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/blue"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/faq">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:text="Jalan-jalan Yuk...!"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="20dp"
+                android:text="Istana Maimun, Kota Medan"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="20dp"
+                android:text="Air Terjun Spiso-piso"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="20dp"
+                android:text="Taman Nasional Gunung Leuser"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:text="Blog Terbaru"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="20dp"
+                android:text="Tempat Wisata di Sumatera Utara"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="20dp"
+                android:text="Melihat Keindahan Pulau Samosir"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="20dp"
+                android:text="10 Taman dan Object Wisata di Medan"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_phone"
+                        android:paddingRight="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="12dp"
+                        android:text="082267870037"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_location"
+                        android:paddingRight="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jl. Thamrin No. XXXX"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lgo"
+                android:paddingTop="32dp"
+                android:paddingLeft="50dp"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
